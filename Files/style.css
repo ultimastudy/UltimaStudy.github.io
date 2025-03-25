@@ -1,0 +1,321 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ef;
+    border-radius: 6px;
+}
+
+/* ========================= */
+/*        NAVIGATION BAR     */
+/* ========================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+    text-decoration: underline;
+}
+
+/* ========================= */
+/*           HOME            */
+/* ========================= */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h4 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.home-content h4 span {
+    color: #0ef;
+    font-size: 32px;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 15px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
+}
+
+/* ========================= */
+/*          ABOUT            */
+/* ========================= */
+.about {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 5% 0;
+}
+
+.about-text {
+    margin-right: 2%;
+}
+
+.about-text h2 {
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+
+/* ========================= */
+/*          SKILLS           */
+/* ========================= */
+#Skills {
+    background-color: black;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 70px;
+}
+
+.subtitle span {
+    color: #0ef;
+}
+
+.cards {
+    width: 400px;
+    min-width: 200px;
+    display: inline-block;
+    box-shadow: 2px 2px 20px #0ef;
+    border-radius: 5px;
+    border: 5px solid #0ef;
+    margin: 20px;
+}
+
+/* ========================= */
+/*         PROJECTS          */
+/* ========================= */
+#Projects {
+    background-color: black;
+}
+
+.main-text {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main-text h2 {
+    font-size: 60px;
+}
+
+.main-text h2 span {
+    color: #0ef;
+}
+
+/* ========================= */
+/*         CONTACTS          */
+/* ========================= */
+.contacts {
+    padding: 40px;
+    background: url('../img/bgWorld.png') no-repeat center center/cover;
+    height: 600px;
+}
+
+.contact-text h2 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.contact-text h2 span {
+    color: #0ef;
+}
+
+.contact-icons i {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+}
+
+/* ========================= */
+/*         ANIMATIONS        */
+/* ========================= */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========================= */
+/*      RESPONSIVE DESIGN    */
+/* ========================= */
+@media (max-width: 900px) {
+    .header {
+        display: block;
+    }
+
+    .logo {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .home {
+        padding-top: 30%;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+
+    .home-content h3 {
+        font-size: 25px;
+    }
+
+    .about {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-content h1 {
+        font-size: 25px;
+    }
+
+    .home-content h3 {
+        font-size: 15px;
+    }
+
+    .home-content h4 {
+        font-size: 10px;
+    }
+}
